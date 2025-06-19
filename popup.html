@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 320px;
+      padding: 10px;
+      font-family: sans-serif;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      margin-bottom: 5px;
+    }
+
+    input[type="number"],
+    input[type="text"] {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+
+    .row {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 5px;
+    }
+
+    .row button {
+      flex: 1;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <h4>Arkime Tools</h4>
+
+  <!-- Sort -->
+  <input type="number" id="colNum" placeholder="Column number (0.39)" min="0" max="39">
+  <div class="row">
+    <button id="sortAsc">Sort UP</button>
+    <button id="sortDesc">Sort DOWN</button>
+  </div>
+
+  <!-- Filter -->
+  <input type="text" id="filterInput" placeholder="Filter text (case-insensitive)">
+  <button id="filterBtn">Apply Filter</button>
+
+  <!-- Group -->
+  <input type="text" id="groupCols" placeholder="Columns for grouping (e.g. 0,2,5)">
+  <button id="groupBtn">Group by Columns</button>
+
+  <!-- Export -->
+  <button id="exportBtn">Export All to CSV</button>
+  <button id="reloadBtn">Reload Page (F5)</button>
+</body>
+<script src="popup.js"></script>
+</html>
